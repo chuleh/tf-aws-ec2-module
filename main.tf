@@ -6,7 +6,7 @@ resource "aws_instance" "ec2" {
   subnet_id                   = element(var.subnet_ids, count.index)
   key_name                    = var.key_name
   associate_public_ip_address = var.associate_public_ip_address
-  vpc_security_group_ids      = var.vpc_security_group_ids
+  vpc_security_group_ids      = element(var.vpc_security_group_ids, count.index)
 }
 
 resource "aws_eip" "eip" {
