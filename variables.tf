@@ -37,3 +37,9 @@ variable "vpc_security_group_ids" {
   type        = list(string)
   default     = []
 }
+
+variable "create_eip" {
+  description = "associate EIP"
+  type = bool
+  default = false
+}
