@@ -35,7 +35,7 @@ variable "associate_public_ip_address" {
 variable "vpc_security_group_ids" {
   description = "list of SGs"
   type        = list(string)
-  default     = []
+  default     = null
 }
 
 variable "create_eip" {
